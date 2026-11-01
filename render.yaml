@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: whatsapp-webhook
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: VERIFY_TOKEN
+        sync: false
+      - key: APP_SECRET
+        sync: false
+      - key: ACCESS_TOKEN
+        sync: false
+      - key: PHONE_NUMBER_ID
+        sync: false
+      - key: AUTO_REPLY
+        value: "false"
